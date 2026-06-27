@@ -45,49 +45,127 @@
     /* ── INFUSOMAT SPACE ── */
     function buildSpace(g) {
       var M = mats();
-      // Cuerpo principal — horizontal, rectangular
-      box(g, 2.4, 0.95, 0.72, M.body);
-      // Frente panel teal
-      box(g, 2.38, 0.93, 0.04, M.panel,  0, 0, 0.385);
-      // Pantalla OLED pequeña (izquierda)
-      box(g, 0.72, 0.54, 0.055, M.screen, -0.72, 0.07, 0.39);
-      box(g, 0.78, 0.60, 0.045, M.dark,   -0.72, 0.07, 0.385); // marco
-      // Texto display (bar simulada)
-      box(g, 0.60, 0.04, 0.06, M.scr2, -0.72, 0.24, 0.40);
-      box(g, 0.60, 0.04, 0.06, M.scr2, -0.72, 0.16, 0.40);
-      // Botones redondos x5 (centro)
-      [-0.12, 0.0, 0.12, 0.24, 0.36].forEach(function(x, i) {
-        cyl(g, 0.055, 0.055, 0.065, i===2 ? M.btnGn : M.btn, x, 0.06, 0.39, 0,0,0, 12);
+      var PI2 = Math.PI / 2;
+
+      // ── Cuerpo principal: bajo y ancho (proporción real ~2.8:1:0.8)
+      box(g, 2.8, 1.0, 0.82, M.body);
+
+      // ── Capota superior redondeada (simula el perfil curvado de la foto)
+      // Capa frontal más alta que la trasera → efecto bisel
+      box(g, 2.8, 0.12, 0.82, M.body,  0,  0.56, 0);        // tapa plana
+      box(g, 2.8, 0.08, 0.20, M.body,  0,  0.52, 0.32);     // visera frontal
+      box(g, 2.78,0.06, 0.82, M.dark,  0,  0.62, 0);        // borde superior oscuro
+
+      // ── Base con patas antideslizantes
+      box(g, 2.82, 0.07, 0.88, M.dark, 0, -0.535, 0);
+      [-1.1, 1.1].forEach(function(x) {
+        box(g, 0.28, 0.08, 0.78, M.rubber, x, -0.615, 0);
       });
-      // Start/Stop (derecha)
-      cyl(g, 0.085, 0.085, 0.07, M.btnGn, 0.82, 0.14, 0.39, 0,0,0, 12);
-      cyl(g, 0.085, 0.085, 0.07, M.btnRd, 0.82, -0.06, 0.39, 0,0,0, 12);
-      // Panel lateral derecho
-      box(g, 0.08, 0.95, 0.72, M.bodyDk, 1.24, 0, 0);
-      // Panel lateral izquierdo
-      box(g, 0.08, 0.95, 0.72, M.bodyDk, -1.24, 0, 0);
-      // Tapa superior
-      box(g, 2.4,  0.07, 0.72, M.dark,  0, 0.51, 0);
-      // Base inferior
-      box(g, 2.52, 0.06, 0.8,  M.dark,  0, -0.505, 0);
-      // Banda teal superior e inferior
-      box(g, 2.38, 0.04, 0.04, M.panel, 0,  0.475, 0.365);
-      box(g, 2.38, 0.04, 0.04, M.panel, 0, -0.475, 0.365);
-      // Guía de tubo (lado derecho)
-      cyl(g, 0.05, 0.05, 0.32, M.rail, 1.2,  0.18, 0.32, Math.PI/2, 0, 0, 8);
-      cyl(g, 0.05, 0.05, 0.32, M.rail, 1.2, -0.15, 0.32, Math.PI/2, 0, 0, 8);
-      // Tubo IV
+
+      // ── Panel teal frontal (ocupa ~60% del ancho, centrado-derecha)
+      // En la foto: el panel teal va desde el centro hasta casi la derecha
+      box(g, 1.75, 0.97, 0.05, M.panel, 0.38, 0, 0.435);
+
+      // ── Pantalla OLED (izquierda, panel blanco con texto negro)
+      // En la foto: pantalla rectangular con marco oscuro, en la mitad izq
+      var scrMat = new THREE.MeshStandardMaterial({
+        color: 0x0a1a10, emissive: 0x00e8c0, emissiveIntensity: 0.55,
+        roughness: 0.05, metalness: 0
+      });
+      box(g, 0.85, 0.58, 0.06, M.dark,  -0.97, 0.06, 0.43);  // marco
+      box(g, 0.78, 0.50, 0.065,scrMat,  -0.97, 0.06, 0.44);  // pantalla
+      // Líneas de texto en pantalla
+      var ln = new THREE.MeshStandardMaterial({ color:0x00ffcc, emissive:0x00ffcc, emissiveIntensity:0.9, roughness:0.1 });
+      box(g, 0.60, 0.05, 0.07, ln, -0.97,  0.22, 0.445);
+      box(g, 0.55, 0.05, 0.07, ln, -0.97,  0.12, 0.445);
+      box(g, 0.40, 0.05, 0.07, ln, -0.97,  0.02, 0.445);
+      box(g, 0.35, 0.05, 0.07, ln, -0.97, -0.10, 0.445);
+      // Indicadores LED (arriba de la pantalla, como en la foto)
+      cyl(g, 0.030, 0.030, 0.065, M.btnGn, -1.15, 0.38, 0.44, 0,0,0, 8);
+      cyl(g, 0.030, 0.030, 0.065, new THREE.MeshStandardMaterial({ color:0xffaa00, emissive:0xffaa00, emissiveIntensity:0.8 }),
+          -1.00, 0.38, 0.44, 0,0,0, 8);
+      cyl(g, 0.030, 0.030, 0.065, M.btnRd, -0.85, 0.38, 0.44, 0,0,0, 8);
+
+      // ── Separación física entre pantalla y panel de botones
+      box(g, 0.025, 0.97, 0.05, M.dark, -0.555, 0, 0.44);
+
+      // ── Panel de botones (lado derecho del panel teal)
+      // Fila superior: cruz de navegación (4 flechas + centro OK)
+      var navX = 0.10, navY = 0.15;
+      cyl(g, 0.058, 0.058, 0.068, M.btn, navX,        navY+0.14, 0.45, 0,0,0, 8); // arriba
+      cyl(g, 0.058, 0.058, 0.068, M.btn, navX,        navY-0.14, 0.45, 0,0,0, 8); // abajo
+      cyl(g, 0.058, 0.058, 0.068, M.btn, navX-0.14,   navY,      0.45, 0,0,0, 8); // izq
+      cyl(g, 0.058, 0.058, 0.068, M.btn, navX+0.14,   navY,      0.45, 0,0,0, 8); // der
+      cyl(g, 0.052, 0.052, 0.072, M.btn, navX,         navY,     0.45, 0,0,0, 10); // OK centro
+
+      // Fila de botones función: C (clock), BOL (amarillo), Power
+      cyl(g, 0.048, 0.048, 0.068, M.btn,    0.50, 0.22, 0.45, 0,0,0, 12); // C
+      cyl(g, 0.048, 0.048, 0.068,
+          new THREE.MeshStandardMaterial({ color:0xddaa00, emissive:0xddaa00, emissiveIntensity:0.7 }),
+          0.65, 0.22, 0.45, 0,0,0, 12); // BOL amarillo
+      cyl(g, 0.048, 0.048, 0.068, M.btn,    0.80, 0.22, 0.45, 0,0,0, 12); // Power
+
+      // Fila inferior: OK, flecha-abajo azul, Start/Stop
+      cyl(g, 0.048, 0.048, 0.068, M.btn,    0.10, -0.05, 0.45, 0,0,0, 12); // OK
+      cyl(g, 0.048, 0.048, 0.068,
+          new THREE.MeshStandardMaterial({ color:0x0055ff, emissive:0x0055ff, emissiveIntensity:0.6 }),
+          0.28, -0.05, 0.45, 0,0,0, 12); // flecha azul
+
+      // Start/Stop: dos botones alargados superpuestos (verde arriba, rojo abajo)
+      cyl(g, 0.068, 0.068, 0.072, M.btnGn, 0.80,  0.06, 0.45, 0,0,0, 12); // Start verde
+      cyl(g, 0.068, 0.068, 0.072, M.btnRd, 0.80, -0.10, 0.45, 0,0,0, 12); // Stop rojo
+
+      // Botón eject (triángulo hacia arriba, derecha extrema)
+      cyl(g, 0.052, 0.052, 0.068, M.btn,  1.08, 0.08, 0.45, 0,0,0, 3); // triángulo
+
+      // ── Lado derecho: mecanismo porta-tubo (brazo con clip)
+      // En la foto: brazo plateado que sobresale con forma de gancho
+      box(g, 0.10, 0.88, 0.18, M.rail,    1.46,  0.06, 0.20); // brazo vertical
+      box(g, 0.18, 0.12, 0.22, M.rail,    1.42,  0.38, 0.22); // tope superior
+      box(g, 0.18, 0.12, 0.22, M.rail,    1.42, -0.26, 0.22); // tope inferior
+      // Clip metálico (la pieza curva plateada visible en foto)
+      box(g, 0.28, 0.70, 0.12, new THREE.MeshStandardMaterial({ color:0x9ab0c4, metalness:0.8, roughness:0.2 }),
+          1.52, 0.05, 0.38);
+      // Ranura del set de infusión
+      box(g, 0.06, 0.60, 0.06, M.dark,    1.52, 0.05, 0.34);
+
+      // ── Lado izquierdo: botón ovalado teal + puerto de IV
+      // En la foto: botón grande teal/verde ovalado en lado izq
+      cyl(g, 0.14, 0.14, 0.10, M.panel,  -1.46, -0.05, 0.10, 0, PI2, 0, 24); // botón teal oval
+      cyl(g, 0.06, 0.06, 0.08, M.dark,   -1.46, -0.05, 0.10, 0, PI2, 0, 16); // centro oscuro
+      // Puerto/conector en lado izq (pequeño)
+      box(g, 0.06, 0.10, 0.10, M.bodyDk, -1.46, 0.30, 0.12);
+
+      // ── Parte trasera: rejillas de ventilación + puertos
+      box(g, 2.78, 0.96, 0.025, M.bodyDk, 0, 0, -0.42); // tapa trasera
+      // Rejillas (líneas horizontales)
+      [-0.28, -0.16, -0.04, 0.08, 0.20].forEach(function(y) {
+        box(g, 0.48, 0.025, 0.04, M.dark, -0.62, y, -0.44);
+      });
+      // Dos conectores en parte inferior trasera
+      box(g, 0.18, 0.10, 0.06, M.rail,  -0.10, -0.38, -0.44);
+      box(g, 0.12, 0.08, 0.06, M.rail,   0.18, -0.38, -0.44);
+
+      // ── Paneles laterales
+      box(g, 0.06, 1.0, 0.82, M.bodyDk,  1.43, 0, 0);
+      box(g, 0.06, 1.0, 0.82, M.bodyDk, -1.43, 0, 0);
+
+      // ── Tubo IV (desde lado derecho hacia arriba)
       var curve = new THREE.CatmullRomCurve3([
-        new THREE.Vector3(1.2,  0.55, 0.1),
-        new THREE.Vector3(1.3,  0.18, 0.18),
-        new THREE.Vector3(1.28,-0.15, 0.1),
-        new THREE.Vector3(1.2, -0.55, 0.1),
+        new THREE.Vector3(1.44,  0.60, 0.28),
+        new THREE.Vector3(1.52,  0.20, 0.35),
+        new THREE.Vector3(1.50, -0.20, 0.30),
+        new THREE.Vector3(1.44, -0.60, 0.22),
       ]);
       g.add(Object.assign(
-        new THREE.Mesh(new THREE.TubeGeometry(curve, 20, 0.025, 8, false),
-          new THREE.MeshStandardMaterial({ color: 0xb8ccd8, transparent: true, opacity: 0.65, roughness: 0.8 })),
+        new THREE.Mesh(new THREE.TubeGeometry(curve, 24, 0.022, 8, false),
+          new THREE.MeshStandardMaterial({ color:0xc0d8e8, transparent:true, opacity:0.7, roughness:0.7 })),
         { castShadow: true }
       ));
+
+      // ── Logo B.Braun (placa en la parte superior frontal)
+      box(g, 0.52, 0.06, 0.025, new THREE.MeshStandardMaterial({ color:0x1a2e44, roughness:0.3, metalness:0.4 }),
+          -0.72, 0.44, 0.44);
     }
 
     /* ── INFUSOMAT COMPACT PLUS ── */
@@ -329,47 +407,8 @@
       });
     }
 
-    /* ── PHOTO VIEWER — Infusomat Space ── */
-    (function () {
-      var section = document.getElementById('pump-space');
-      var overlay = document.getElementById('overlay-space');
-      var angles  = Array.from(document.querySelectorAll('#viewer-space .pump-angle'));
-      var fill    = document.getElementById('prog-space');
-      var hint    = document.getElementById('hint-space');
-      var panels  = Array.from(document.querySelectorAll('#pump-space .ppanel'));
-      if (!section || !overlay || !angles.length) return;
-
-      ScrollTrigger.create({
-        trigger: section,
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: 1.5,
-        onUpdate: function (self) {
-          var p = self.progress;
-
-          /* Oscuridad → luz en el primer 30% del scroll */
-          var reveal = Math.min(p / 0.30, 1);
-          /* ease cuadrático suave */
-          var eased  = reveal < 0.5 ? 2 * reveal * reveal : -1 + (4 - 2 * reveal) * reveal;
-          overlay.style.opacity = String(1 - eased);
-
-          /* Cambio de ángulo: 4 fotos en 4 cuartos */
-          var idx = Math.min(Math.floor(p * 4), 3);
-          angles.forEach(function (img, i) { img.classList.toggle('active', i === idx); });
-
-          /* Texto panels */
-          panels.forEach(function (panel, i) { panel.classList.toggle('active', i === idx); });
-
-          /* Barra de progreso */
-          if (fill) fill.style.height = (p * 100) + '%';
-
-          /* Hint desaparece tras 8% scroll */
-          if (hint) hint.style.opacity = p > 0.08 ? '0' : '1';
-        }
-      });
-    })();
-
-    /* ── ESCENA 3D — Infusomat compact plus ── */
+    /* ── INICIAR AMBAS ESCENAS 3D ── */
+    buildScene('canvas-space',   'pump-space',   buildSpace,   4,  0.25);
     buildScene('canvas-compact', 'pump-compact', buildCompact, 4, -0.2);
   };
 
