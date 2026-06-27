@@ -4,189 +4,173 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bombas de Infusión B.Braun — Este Médica</title>
-  <meta name="description" content="Distribuidor autorizado de bombas de infusión B.Braun en México. Infusomat Space, Perfusor Space y más. Envío inmediato." />
+  <meta name="description" content="Distribuidor autorizado de bombas de infusión B.Braun en México. Infusomat Space e Infusomat Compact. Cotiza ahora." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260626" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- SPLASH -->
-  <div class="splash" data-splash aria-hidden="true">
-    <div class="splash-inner">
-      <div class="splash-logo">
-        <span class="splash-brand">Este Médica</span>
-        <span class="splash-sep">×</span>
-        <span class="splash-bbraun">B.Braun</span>
-      </div>
-      <div class="splash-bar"><div class="splash-bar-fill"></div></div>
-    </div>
-  </div>
-
   <!-- NAV -->
-  <nav class="nav" role="navigation" aria-label="Navegación principal">
+  <nav class="nav" id="nav">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">
-        <span class="nav-logo-este">Este Médica</span>
+      <a href="#" class="nav-logo" aria-label="Este Médica inicio">
+        <svg class="logo-svg" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Cruz médica Este Médica -->
+          <rect x="0" y="12" width="16" height="36" rx="2" fill="#1B3A8C"/>
+          <rect x="0" y="22" width="36" height="16" rx="2" fill="#1B3A8C"/>
+          <rect x="14" y="26" width="14" height="14" rx="1" fill="white"/>
+          <text x="46" y="28" font-family="Inter,sans-serif" font-weight="700" font-size="18" fill="#1B3A8C">Este</text>
+          <text x="46" y="50" font-family="Inter,sans-serif" font-weight="700" font-size="18" fill="#1B3A8C">Médica</text>
+        </svg>
       </a>
       <ul class="nav-links" role="list">
-        <li><a href="#modelos">Modelos</a></li>
-        <li><a href="#caracteristicas">Características</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#beneficios">¿Por qué nosotros?</a></li>
+        <li><a href="#cotizar">Cotizar</a></li>
       </ul>
-      <a href="#contacto" class="btn btn-nav">Cotizar ahora</a>
+      <a href="https://wa.me/528683009437?text=Hola%2C%20me%20interesa%20cotizar%20una%20bomba%20B.Braun" target="_blank" rel="noopener" class="btn btn-whatsapp-nav">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero" id="inicio">
-    <div class="hero-bg">
-      <div class="hero-img hero-photo-hospital"></div>
-      <div class="hero-tint"></div>
-    </div>
-    <div class="hero-mesh"></div>
-    <div class="hero-grain"></div>
-
     <div class="hero-content">
-      <p class="hero-eyebrow reveal" data-split="false">Distribución autorizada · México</p>
-      <h1 class="hero-title">
-        <span class="reveal-line">Precisión que</span>
-        <span class="reveal-line accent-green"><em>salva vidas.</em></span>
-      </h1>
-      <p class="hero-sub reveal">Bombas de infusión B.Braun — tecnología alemana de vanguardia para hospitales y clínicas en todo México.</p>
-      <div class="hero-actions reveal">
-        <a href="#modelos" class="btn btn-primary">Ver modelos</a>
-        <a href="#contacto" class="btn btn-ghost">Cotizar por WhatsApp</a>
+      <div class="hero-text">
+        <p class="hero-eyebrow">Distribución autorizada · Todo México</p>
+        <h1 class="hero-title">Bombas de infusión <span class="accent">B.Braun</span> con entrega inmediata</h1>
+        <p class="hero-sub">Equipamos hospitales, clínicas y consultorios en toda la república. Infusomat Space e Infusomat Compact plus — originales, con garantía y soporte técnico.</p>
+        <div class="hero-trust">
+          <div class="trust-item">
+            <span class="trust-icon">✓</span>
+            <span>Equipos 100% originales</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">✓</span>
+            <span>Envío a toda la república</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">✓</span>
+            <span>Respuesta en menos de 2 hrs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-form-wrap" id="cotizar">
+        <div class="hero-form-card">
+          <p class="form-title">Solicita tu cotización gratis</p>
+          <p class="form-sub">Un asesor te contacta en menos de 2 horas hábiles</p>
+          <form class="lead-form" id="lead-form" novalidate>
+            <div class="field">
+              <label for="h-nombre">Nombre completo *</label>
+              <input type="text" id="h-nombre" name="nombre" placeholder="Dr. Martínez García" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="h-tel">WhatsApp / Teléfono *</label>
+              <input type="tel" id="h-tel" name="telefono" placeholder="868 300 9437" required autocomplete="tel" />
+            </div>
+            <div class="field">
+              <label for="h-inst">Hospital o institución *</label>
+              <input type="text" id="h-inst" name="institucion" placeholder="Hospital General, Clínica..." required />
+            </div>
+            <div class="field">
+              <label for="h-modelo">Modelo de interés</label>
+              <select id="h-modelo" name="modelo">
+                <option value="">¿Qué equipo necesitas?</option>
+                <option value="infusomat-space">Infusomat® Space</option>
+                <option value="infusomat-compact">Infusomat® compact plus</option>
+                <option value="ambos">Ambos modelos</option>
+                <option value="no-se">No estoy seguro aún</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="h-cantidad">Cantidad aproximada</label>
+              <select id="h-cantidad" name="cantidad">
+                <option value="">Seleccionar</option>
+                <option value="1">1 equipo</option>
+                <option value="2-5">2 – 5 equipos</option>
+                <option value="6-20">6 – 20 equipos</option>
+                <option value="20+">Más de 20 equipos</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-submit" id="submit-btn">
+              <span class="btn-label">Quiero mi cotización →</span>
+              <span class="btn-sent" aria-hidden="true">✓ ¡Recibido! Te contactamos pronto</span>
+            </button>
+            <p class="form-privacy">Sin spam. Solo un asesor especializado te llama.</p>
+          </form>
+        </div>
       </div>
     </div>
 
     <div class="hero-stats">
       <div class="stat">
-        <span class="stat-num" data-count-to="15">0</span><span class="stat-unit">+</span>
-        <span class="stat-label">años distribuyendo</span>
-      </div>
-      <div class="stat-sep" aria-hidden="true"></div>
-      <div class="stat">
-        <span class="stat-num" data-count-to="500">0</span><span class="stat-unit">+</span>
+        <span class="stat-num" data-count="500">0</span><span class="stat-sfx">+</span>
         <span class="stat-label">hospitales atendidos</span>
       </div>
-      <div class="stat-sep" aria-hidden="true"></div>
+      <div class="stat-sep"></div>
       <div class="stat">
-        <span class="stat-num" data-count-to="24">0</span><span class="stat-unit">h</span>
-        <span class="stat-label">envío a todo México</span>
+        <span class="stat-num" data-count="32">0</span><span class="stat-sfx"> estados</span>
+        <span class="stat-label">cobertura nacional</span>
       </div>
-    </div>
-
-    <div class="hero-scroll" aria-hidden="true">
-      <span></span>
-      <span></span>
-      <span></span>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <span class="stat-num" data-count="24">0</span><span class="stat-sfx">h</span>
+        <span class="stat-label">tiempo de respuesta</span>
+      </div>
     </div>
   </section>
 
-  <!-- PUMP 3D SECTION -->
-  <section class="section-pump" id="pump-section">
-    <div class="pump-sticky">
-      <canvas id="pump-canvas"></canvas>
-      <div class="pump-overlay">
-        <div class="pump-panel" data-panel="0">
-          <p class="pump-eyebrow">Infusomat<sup>®</sup> Space</p>
-          <h2 class="pump-title">Precisión<br><em>alemana.</em></h2>
-          <p class="pump-desc">El estándar mundial en bombas volumétricas. Tecnología B.Braun que confían los mejores hospitales del mundo.</p>
-        </div>
-        <div class="pump-panel" data-panel="1">
-          <p class="pump-eyebrow">Vista lateral</p>
-          <h2 class="pump-title">Mecanismo<br><em>anti-free-flow.</em></h2>
-          <p class="pump-desc">Sistema de seguridad que previene la administración accidental de fluidos. Certificado para UCI y quirófano.</p>
-        </div>
-        <div class="pump-panel" data-panel="2">
-          <p class="pump-eyebrow">Vista posterior</p>
-          <h2 class="pump-title">Riel DIN<br><em>universal.</em></h2>
-          <p class="pump-desc">Compatible con cualquier soporte hospitalario estándar. Montaje en segundos, sin herramientas.</p>
-        </div>
-        <div class="pump-panel" data-panel="3">
-          <p class="pump-eyebrow">360° completo</p>
-          <h2 class="pump-title">Diseñado para<br><em>salvar vidas.</em></h2>
-          <p class="pump-desc">Cada ángulo pensado para el entorno clínico. Compacto, seguro y conectado al sistema Space.</p>
-          <a href="#contacto" class="btn btn-primary pump-cta">Cotizar este equipo →</a>
-        </div>
-      </div>
-      <div class="pump-progress">
-        <div class="pump-progress-fill" id="pump-progress-fill"></div>
-      </div>
-      <div class="pump-hint" aria-hidden="true">
-        <span>Desliza para girar</span>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 9l-7 7-7-7"/></svg>
-      </div>
-    </div>
-    <div class="pump-spacer"></div>
-  </section>
-
-  <!-- MARQUEE -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>Infusomat Space</span><span class="dot">·</span>
-      <span>Perfusor Space</span><span class="dot">·</span>
-      <span>Space Station</span><span class="dot">·</span>
-      <span>Outlook Safety</span><span class="dot">·</span>
-      <span>Infusomat Space Plus</span><span class="dot">·</span>
-      <span>B.Braun Medical</span><span class="dot">·</span>
-      <span>Infusomat Space</span><span class="dot">·</span>
-      <span>Perfusor Space</span><span class="dot">·</span>
-      <span>Space Station</span><span class="dot">·</span>
-      <span>Outlook Safety</span><span class="dot">·</span>
-      <span>Infusomat Space Plus</span><span class="dot">·</span>
-      <span>B.Braun Medical</span><span class="dot">·</span>
-    </div>
-  </div>
-
-  <!-- MODELOS -->
-  <section class="section-models" id="modelos">
+  <!-- PRODUCTOS -->
+  <section class="section-products" id="productos">
     <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow reveal">Línea de productos</p>
-        <h2 class="section-title reveal">Los mejores equipos<br><em>del mundo médico.</em></h2>
-      </div>
+      <p class="section-eyebrow">Línea de productos</p>
+      <h2 class="section-title">Equipos que confían los mejores hospitales de México</h2>
 
-      <div class="models-grid">
+      <div class="products-grid">
 
-        <article class="model-card reveal" data-model="infusomat">
-          <div class="model-img-wrap">
-            <div class="model-img model-photo-pump" role="img" aria-label="Infusomat Space B.Braun"></div>
-            <div class="model-badge">Más vendido</div>
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/img/infusomat-space.jpg" alt="Infusomat Space B.Braun" class="product-img" />
+            <div class="product-badge">Más solicitado</div>
           </div>
-          <div class="model-info">
-            <p class="model-type">Bomba volumétrica</p>
-            <h3 class="model-name">Infusomat<sup>®</sup> Space</h3>
-            <p class="model-desc">La bomba de infusión más precisa del mercado. Compatible con sistema Space para terapias complejas de UCI.</p>
-            <ul class="model-specs">
-              <li><span class="spec-icon">✓</span> Flujo: 0.1 – 999.9 mL/h</li>
-              <li><span class="spec-icon">✓</span> Alarmas inteligentes</li>
-              <li><span class="spec-icon">✓</span> VTBI programable</li>
-              <li><span class="spec-icon">✓</span> Módulo SpaceCom</li>
+          <div class="product-info">
+            <p class="product-type">Bomba volumétrica</p>
+            <h3 class="product-name">Infusomat<sup>®</sup> Space</h3>
+            <p class="product-desc">La bomba de infusión estándar de oro en UCI y hospitalización. Precisión milimétrica, alarmas inteligentes y compatible con el sistema Space de B.Braun.</p>
+            <ul class="product-specs">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Flujo: 0.1 – 999.9 mL/h</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> VTBI y alarmas configurables</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Montaje en riel DIN universal</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Pantalla retroiluminada</li>
             </ul>
-            <a href="#contacto" class="btn btn-card">Solicitar cotización →</a>
+            <a href="#cotizar" class="btn btn-product">Cotizar este equipo</a>
           </div>
         </article>
 
-        <article class="model-card reveal" data-model="perfusor">
-          <div class="model-img-wrap">
-            <div class="model-img model-photo-perfusor" role="img" aria-label="Perfusor Space B.Braun"></div>
-            <div class="model-badge badge-alt">UCI · Alta precisión</div>
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/img/infusomat-compact.jpg" alt="Infusomat Compact Plus B.Braun" class="product-img" />
+            <div class="product-badge badge-teal">Alta tecnología</div>
           </div>
-          <div class="model-info">
-            <p class="model-type">Bomba de jeringa</p>
-            <h3 class="model-name">Perfusor<sup>®</sup> Space</h3>
-            <p class="model-desc">Administración de medicamentos vasoactivos con precisión de microgramos. Ideal para pacientes críticos.</p>
-            <ul class="model-specs">
-              <li><span class="spec-icon">✓</span> Flujo: 0.1 – 999 mL/h</li>
-              <li><span class="spec-icon">✓</span> Detección automática de jeringa</li>
-              <li><span class="spec-icon">✓</span> Anti-free-flow</li>
-              <li><span class="spec-icon">✓</span> Bolus controlado</li>
+          <div class="product-info">
+            <p class="product-type">Bomba volumétrica avanzada</p>
+            <h3 class="product-name">Infusomat<sup>®</sup> compact<sup>plus</sup></h3>
+            <p class="product-desc">Diseño compacto con pantalla a color y guía visual paso a paso para el cambio de set. Ideal para entornos de alta demanda y movilidad del paciente.</p>
+            <ul class="product-specs">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Pantalla color con guía visual</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Sistema anti-free-flow activo</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Batería interna recargable</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Diseño compacto y ergonómico</li>
             </ul>
-            <a href="#contacto" class="btn btn-card">Solicitar cotización →</a>
+            <a href="#cotizar" class="btn btn-product">Cotizar este equipo</a>
           </div>
         </article>
 
@@ -194,113 +178,151 @@
     </div>
   </section>
 
-  <!-- CARACTERISTICAS -->
-  <section class="section-features" id="caracteristicas">
-    <div class="features-bg">
-      <div class="features-img features-photo-nurse" aria-hidden="true"></div>
-      <div class="features-tint"></div>
-    </div>
+  <!-- BENEFICIOS -->
+  <section class="section-benefits" id="beneficios">
     <div class="container">
-      <div class="section-header light">
-        <p class="section-eyebrow reveal">Por qué elegirnos</p>
-        <h2 class="section-title reveal">Tecnología alemana.<br><em>Servicio mexicano.</em></h2>
-      </div>
+      <p class="section-eyebrow light">¿Por qué Este Médica?</p>
+      <h2 class="section-title light">La diferencia está en el servicio</h2>
 
-      <div class="features-grid">
-        <div class="feature-item reveal">
-          <div class="feature-icon">⚡</div>
-          <h3>Envío en 24h</h3>
-          <p>Stock permanente en CDMX. Entregamos a todo México en tiempo récord para urgencias hospitalarias.</p>
+      <div class="benefits-grid">
+        <div class="benefit-item reveal">
+          <div class="benefit-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3>Equipos 100% originales</h3>
+          <p>Distribuidor certificado de B.Braun. Cada equipo incluye número de serie, garantía oficial de fábrica y factura con datos fiscales.</p>
         </div>
-        <div class="feature-item reveal">
-          <div class="feature-icon">🔒</div>
-          <h3>100% originales</h3>
-          <p>Distribuidor certificado B.Braun. Todos los equipos incluyen garantía oficial de fábrica y número de serie.</p>
+        <div class="benefit-item reveal">
+          <div class="benefit-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </div>
+          <h3>Respuesta en 2 horas</h3>
+          <p>Enviamos cotización formal en menos de 2 horas hábiles. Para urgencias hospitalarias, coordinamos entrega el mismo día desde CDMX.</p>
         </div>
-        <div class="feature-item reveal">
-          <div class="feature-icon">🛠</div>
-          <h3>Soporte técnico</h3>
-          <p>Capacitación al personal clínico y soporte post-venta. Contamos con técnicos especializados en equipos B.Braun.</p>
+        <div class="benefit-item reveal">
+          <div class="benefit-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+          </div>
+          <h3>Toda la república</h3>
+          <p>Entregamos en los 32 estados. Contamos con paquetería exprés y logística especializada para equipos médicos certificados.</p>
         </div>
-        <div class="feature-item reveal">
-          <div class="feature-icon">💊</div>
-          <h3>Consumibles incluidos</h3>
-          <p>Acceso a toda la línea de sets de infusión, jeringas y accesorios B.Braun compatibles con cada equipo.</p>
+        <div class="benefit-item reveal">
+          <div class="benefit-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3>Soporte técnico especializado</h3>
+          <p>Capacitación al personal clínico incluida. Técnicos certificados en equipos B.Braun para instalación, mantenimiento y soporte post-venta.</p>
+        </div>
+        <div class="benefit-item reveal">
+          <div class="benefit-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          </div>
+          <h3>Precios competitivos</h3>
+          <p>Compra directa sin intermediarios. Manejamos volumen para hospitales públicos y privados, IMSS, ISSSTE y secretarías de salud estatales.</p>
+        </div>
+        <div class="benefit-item reveal">
+          <div class="benefit-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+          </div>
+          <h3>Consumibles y accesorios</h3>
+          <p>Sets de infusión, soportes IV y accesorios B.Braun originales compatibles con cada equipo. Todo en un solo proveedor.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- NOSOTROS -->
-  <section class="section-about" id="nosotros">
-    <div class="container about-grid">
-      <div class="about-text">
-        <p class="section-eyebrow reveal">Sobre Este Médica</p>
-        <h2 class="section-title reveal">Distribuidores líderes<br><em>de insumos médicos.</em></h2>
-        <p class="about-body reveal">Somos una empresa mexicana especializada en la distribución de equipos y material médico de las mejores marcas del mundo. Con más de 15 años en el mercado, nos hemos convertido en el socio de confianza de hospitales públicos y privados en toda la república.</p>
-        <p class="about-body reveal">La línea B.Braun representa nuestra apuesta por la excelencia: equipos certificados, tecnología de punta y el respaldo de una marca líder mundial en soluciones para la salud.</p>
-        <a href="#contacto" class="btn btn-primary reveal">Hablar con un asesor</a>
+  <!-- CTA SECUNDARIO -->
+  <section class="section-cta2">
+    <div class="container cta2-inner">
+      <div class="cta2-text reveal">
+        <h2>¿Necesitas equipos con urgencia?</h2>
+        <p>Llámanos o escríbenos por WhatsApp. Tenemos stock disponible y coordinamos entrega exprés.</p>
       </div>
-      <div class="about-visual reveal">
-        <div class="about-photo" role="img" aria-label="Hospital moderno con equipo B.Braun"></div>
-        <div class="about-badge">
-          <span class="badge-num" data-count-to="15">0</span><span>+</span>
-          <span class="badge-text">años de experiencia</span>
-        </div>
+      <div class="cta2-actions reveal">
+        <a href="tel:+528683009437" class="btn btn-outline-white">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          868 300 9437
+        </a>
+        <a href="https://wa.me/528683009437?text=Hola%2C%20necesito%20cotizar%20bombas%20B.Braun%20con%20urgencia" target="_blank" rel="noopener" class="btn btn-whatsapp-big">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp directo
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- CTA / CONTACTO -->
-  <section class="section-cta" id="contacto">
-    <div class="cta-mesh"></div>
-    <div class="container">
-      <div class="cta-inner">
-        <p class="section-eyebrow light reveal">Contacto directo</p>
-        <h2 class="cta-title reveal">¿Listo para cotizar<br><em>tu equipo B.Braun?</em></h2>
-        <p class="cta-sub reveal">Envíanos tu solicitud y un asesor especializado te contactará en menos de 2 horas hábiles.</p>
+  <!-- FORM SECUNDARIO -->
+  <section class="section-form2">
+    <div class="container form2-inner">
+      <div class="form2-text reveal">
+        <p class="section-eyebrow">Cotización sin compromiso</p>
+        <h2 class="section-title">Recibe tu propuesta<br>en menos de 2 horas</h2>
+        <p class="form2-sub">Cuéntanos qué necesitas y un asesor especializado en equipos B.Braun te prepara una propuesta personalizada.</p>
+        <ul class="form2-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Precio por volumen disponible</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Facturación a persona moral y física</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Financiamiento disponible</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Asesoría técnica sin costo</li>
+        </ul>
+      </div>
 
-        <form class="cta-form reveal" id="cta-form" novalidate>
+      <div class="form2-card reveal">
+        <form class="lead-form" id="lead-form-2" novalidate>
           <div class="form-row">
-            <div class="form-field">
-              <label for="nombre">Nombre completo</label>
-              <input type="text" id="nombre" name="nombre" placeholder="Dr. García López" required />
+            <div class="field">
+              <label for="f2-nombre">Nombre completo *</label>
+              <input type="text" id="f2-nombre" name="nombre" placeholder="Dr. Martínez García" required />
             </div>
-            <div class="form-field">
-              <label for="institucion">Hospital / Institución</label>
-              <input type="text" id="institucion" name="institucion" placeholder="Hospital General IMSS" required />
+            <div class="field">
+              <label for="f2-cargo">Cargo</label>
+              <input type="text" id="f2-cargo" name="cargo" placeholder="Jefe de compras, Director..." />
             </div>
           </div>
           <div class="form-row">
-            <div class="form-field">
-              <label for="telefono">Teléfono / WhatsApp</label>
-              <input type="tel" id="telefono" name="telefono" placeholder="+52 55 1234 5678" required />
+            <div class="field">
+              <label for="f2-tel">WhatsApp / Teléfono *</label>
+              <input type="tel" id="f2-tel" name="telefono" placeholder="868 300 9437" required />
             </div>
-            <div class="form-field">
-              <label for="modelo">Modelo de interés</label>
-              <select id="modelo" name="modelo">
+            <div class="field">
+              <label for="f2-email">Correo electrónico</label>
+              <input type="email" id="f2-email" name="email" placeholder="compras@hospital.com" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="f2-inst">Hospital / Institución *</label>
+            <input type="text" id="f2-inst" name="institucion" placeholder="Hospital General, Clínica Privada, IMSS..." required />
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="f2-modelo">Modelo de interés</label>
+              <select id="f2-modelo" name="modelo">
                 <option value="">Seleccionar modelo</option>
-                <option value="infusomat">Infusomat Space</option>
-                <option value="perfusor">Perfusor Space</option>
-                <option value="station">Space Station</option>
-                <option value="otro">Otro / No sé aún</option>
+                <option value="infusomat-space">Infusomat® Space</option>
+                <option value="infusomat-compact">Infusomat® compact plus</option>
+                <option value="ambos">Ambos modelos</option>
+                <option value="no-se">No estoy seguro</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f2-cantidad">Cantidad requerida</label>
+              <select id="f2-cantidad" name="cantidad">
+                <option value="">Seleccionar</option>
+                <option value="1">1 equipo</option>
+                <option value="2-5">2 – 5 equipos</option>
+                <option value="6-20">6 – 20 equipos</option>
+                <option value="20+">Más de 20 equipos</option>
               </select>
             </div>
           </div>
-          <div class="form-field full">
-            <label for="mensaje">Mensaje (opcional)</label>
-            <textarea id="mensaje" name="mensaje" rows="3" placeholder="Cantidad de equipos, urgencia, presupuesto aproximado..."></textarea>
+          <div class="field">
+            <label for="f2-msg">Información adicional</label>
+            <textarea id="f2-msg" name="mensaje" rows="3" placeholder="Urgencia, presupuesto aproximado, estado de entrega, preguntas técnicas..."></textarea>
           </div>
-          <div class="form-actions">
-            <button type="submit" class="btn btn-submit" id="submit-btn">
-              <span class="btn-label">Enviar solicitud</span>
-              <span class="btn-check" aria-hidden="true">✓ Enviado</span>
-            </button>
-            <a href="https://wa.me/528683009437?text=Hola,%20quisiera%20información%20sobre%20bombas%20B.Braun" target="_blank" rel="noopener" class="btn btn-whatsapp">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp directo
-            </a>
-          </div>
+          <button type="submit" class="btn btn-submit-full" id="submit-btn-2">
+            <span class="btn-label">Enviar solicitud de cotización →</span>
+            <span class="btn-sent" aria-hidden="true">✓ ¡Solicitud enviada! Te contactamos pronto</span>
+          </button>
+          <p class="form-privacy">Tu información es confidencial y no se comparte con terceros.</p>
         </form>
       </div>
     </div>
@@ -310,25 +332,41 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <span class="footer-logo">Este Médica</span>
-        <p>Distribuidora líder de insumos médicos y equipo quirúrgico en México.</p>
+        <svg class="logo-svg logo-svg-white" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Este Médica">
+          <rect x="0" y="12" width="16" height="36" rx="2" fill="white"/>
+          <rect x="0" y="22" width="36" height="16" rx="2" fill="white"/>
+          <rect x="14" y="26" width="14" height="14" rx="1" fill="#1B3A8C"/>
+          <text x="46" y="28" font-family="Inter,sans-serif" font-weight="700" font-size="18" fill="white">Este</text>
+          <text x="46" y="50" font-family="Inter,sans-serif" font-weight="700" font-size="18" fill="white">Médica</text>
+        </svg>
+        <p>Distribuidores especializados en equipo médico B.Braun. Atendemos hospitales y clínicas en toda la república mexicana.</p>
       </div>
-      <div class="footer-links">
-        <a href="https://estemedicacom.com" target="_blank" rel="noopener">Tienda en línea</a>
-        <a href="#modelos">Modelos B.Braun</a>
-        <a href="#contacto">Contacto</a>
+      <div class="footer-col">
+        <h4>Productos</h4>
+        <a href="#productos">Infusomat® Space</a>
+        <a href="#productos">Infusomat® compact plus</a>
+        <a href="#cotizar">Solicitar cotización</a>
       </div>
-      <div class="footer-legal">
-        <p>© 2026 Este Médica. Distribuidor no oficial de B.Braun.</p>
-        <p class="credits-note">Imágenes: <a href="assets/credits.json" target="_blank">ver atribuciones</a></p>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="tel:+528683009437">868 300 9437</a>
+        <a href="mailto:ventas@estemedicacom.com">ventas@estemedicacom.com</a>
+        <a href="https://wa.me/528683009437" target="_blank" rel="noopener">WhatsApp directo</a>
+        <a href="https://estemedicacom.com" target="_blank" rel="noopener">estemedicacom.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 Este Médica. Distribuidor no oficial de B.Braun. Todos los derechos reservados.</p>
       </div>
     </div>
   </footer>
 
-  <script defer src="lib/three.min.js"></script>
-  <script defer src="lib/gsap.min.js"></script>
-  <script defer src="lib/ScrollTrigger.min.js"></script>
-  <script defer src="pump3d.js?v=20260626"></script>
-  <script defer src="main.js?v=20260626"></script>
+  <!-- WHATSAPP FLOTANTE -->
+  <a href="https://wa.me/528683009437?text=Hola%2C%20me%20interesa%20cotizar%20una%20bomba%20B.Braun" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="main.js"></script>
 </body>
 </html>
