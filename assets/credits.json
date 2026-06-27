@@ -1,0 +1,9 @@
+{
+  "note": "Esta landing page usa fondos generados con CSS. No se utilizan fotografías de terceros.",
+  "libraries": [
+    { "name": "Three.js", "version": "r128", "license": "MIT", "url": "https://threejs.org" },
+    { "name": "GSAP", "version": "3.x", "license": "Standard", "url": "https://greensock.com/gsap/" },
+    { "name": "Inter", "source": "Google Fonts", "license": "SIL Open Font License" },
+    { "name": "Fraunces", "source": "Google Fonts", "license": "SIL Open Font License" }
+  ]
+}

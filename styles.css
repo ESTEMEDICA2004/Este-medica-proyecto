@@ -101,6 +101,14 @@ body {
   width: 100%; height: 100%; object-fit: cover;
   transform-origin: center; will-change: transform;
 }
+.hero-photo-hospital {
+  background:
+    radial-gradient(ellipse 120% 80% at 70% 40%, rgba(0,80,160,0.25) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 20% 70%, rgba(0,166,81,0.15) 0%, transparent 50%),
+    linear-gradient(135deg, #0d2235 0%, #1a3a50 30%, #0f2d1f 70%, #0d1a0f 100%);
+  background-size: cover;
+  position: absolute; inset: 0;
+}
 .hero-tint {
   position: absolute; inset: 0;
   background: linear-gradient(
@@ -424,6 +432,40 @@ body {
   width: 100%; height: 100%; object-fit: cover;
   transition: transform .6s var(--ease-out);
 }
+.model-photo-pump {
+  background:
+    radial-gradient(ellipse 50% 70% at 50% 45%, rgba(0,166,81,0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 40% at 50% 90%, rgba(0,166,81,0.12) 0%, transparent 50%),
+    linear-gradient(160deg, #0d1f2d 0%, #142a3a 35%, #0e2218 65%, #091510 100%);
+  display: flex; align-items: center; justify-content: center;
+}
+.model-photo-pump::after {
+  content: '';
+  display: block; width: 70px; height: 120px;
+  background: linear-gradient(160deg, #1c3a50 0%, #243a50 40%, #1a2d1a 100%);
+  border-radius: 8px;
+  box-shadow:
+    0 0 40px rgba(0,166,81,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.08),
+    2px 0 0 rgba(0,166,81,0.6);
+}
+.model-photo-perfusor {
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 50%, rgba(0,150,200,0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 40% at 50% 90%, rgba(0,166,81,0.1) 0%, transparent 50%),
+    linear-gradient(160deg, #0b1a2d 0%, #122238 35%, #0d1d28 65%, #091520 100%);
+  display: flex; align-items: center; justify-content: center;
+}
+.model-photo-perfusor::after {
+  content: '';
+  display: block; width: 100px; height: 60px;
+  background: linear-gradient(160deg, #182e40 0%, #1e3550 40%, #152838 100%);
+  border-radius: 8px;
+  box-shadow:
+    0 0 40px rgba(0,150,200,0.2),
+    inset 0 1px 0 rgba(255,255,255,0.08),
+    0 -2px 0 rgba(0,166,81,0.5);
+}
 .model-card:hover .model-img { transform: scale(1.05); }
 .model-badge {
   position: absolute; top: 1rem; left: 1rem;
@@ -455,6 +497,13 @@ body {
 }
 .features-bg { position: absolute; inset: 0; }
 .features-img { width: 100%; height: 100%; object-fit: cover; }
+.features-photo-nurse {
+  background:
+    radial-gradient(ellipse 80% 60% at 60% 50%, rgba(0,120,60,0.3) 0%, transparent 60%),
+    linear-gradient(135deg, #071a0e 0%, #0d2818 40%, #162e1a 100%);
+  background-size: cover;
+  position: absolute; inset: 0;
+}
 .features-tint {
   position: absolute; inset: 0;
   background: linear-gradient(135deg, rgba(11,17,23,.95) 40%, rgba(0,40,20,.88) 100%);
@@ -491,6 +540,13 @@ body {
   aspect-ratio: 4/3;
 }
 .about-visual img { width: 100%; height: 100%; object-fit: cover; }
+.about-photo {
+  width: 100%; height: 100%;
+  background:
+    radial-gradient(ellipse 100% 60% at 50% 30%, rgba(0,150,200,0.2) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 80% 80%, rgba(0,166,81,0.15) 0%, transparent 50%),
+    linear-gradient(145deg, #0d2235 0%, #152d45 40%, #0f2820 70%, #0b1a14 100%);
+}
 .about-badge {
   position: absolute; bottom: 1.5rem; left: 1.5rem;
   background: var(--green); color: #fff;

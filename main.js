@@ -101,7 +101,7 @@
 
   /* ---- HERO PARALLAX ---- */
   function initHeroParallax() {
-    var img = document.querySelector(".hero-img");
+    var img = document.querySelector(".hero-photo-hospital");
     if (!img) return;
     var ticking = false;
     window.addEventListener("scroll", function () {
