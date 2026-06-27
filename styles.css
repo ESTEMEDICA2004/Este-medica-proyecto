@@ -226,6 +226,32 @@ body {
   position: absolute; inset: 0; width: 100%; height: 100%; display: block;
 }
 
+/* ---- PHOTO VIEWER (Space) ---- */
+.pump-viewer {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.pump-dark-overlay {
+  position: absolute; inset: 0;
+  background: var(--bg);
+  z-index: 2;
+  pointer-events: none;
+  transition: opacity .05s linear;
+}
+.pump-angle {
+  position: absolute;
+  max-height: 62vh; max-width: 52%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity .5s cubic-bezier(0.4,0,0.2,1);
+  filter: drop-shadow(0 24px 64px rgba(0,169,157,.25));
+  will-change: opacity;
+}
+.pump-angle.active { opacity: 1; }
+@media (max-width: 768px) {
+  .pump-angle { max-width: 88%; max-height: 45vh; }
+}
+
 .pump-panels {
   position: absolute; top: 50%; left: 6vw;
   transform: translateY(-50%);

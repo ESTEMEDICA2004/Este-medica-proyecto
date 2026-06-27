@@ -329,8 +329,47 @@
       });
     }
 
-    /* ── INICIAR AMBAS ESCENAS ── */
-    buildScene('canvas-space',   'pump-space',   buildSpace,   4, 0.25);
+    /* ── PHOTO VIEWER — Infusomat Space ── */
+    (function () {
+      var section = document.getElementById('pump-space');
+      var overlay = document.getElementById('overlay-space');
+      var angles  = Array.from(document.querySelectorAll('#viewer-space .pump-angle'));
+      var fill    = document.getElementById('prog-space');
+      var hint    = document.getElementById('hint-space');
+      var panels  = Array.from(document.querySelectorAll('#pump-space .ppanel'));
+      if (!section || !overlay || !angles.length) return;
+
+      ScrollTrigger.create({
+        trigger: section,
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: 1.5,
+        onUpdate: function (self) {
+          var p = self.progress;
+
+          /* Oscuridad → luz en el primer 30% del scroll */
+          var reveal = Math.min(p / 0.30, 1);
+          /* ease cuadrático suave */
+          var eased  = reveal < 0.5 ? 2 * reveal * reveal : -1 + (4 - 2 * reveal) * reveal;
+          overlay.style.opacity = String(1 - eased);
+
+          /* Cambio de ángulo: 4 fotos en 4 cuartos */
+          var idx = Math.min(Math.floor(p * 4), 3);
+          angles.forEach(function (img, i) { img.classList.toggle('active', i === idx); });
+
+          /* Texto panels */
+          panels.forEach(function (panel, i) { panel.classList.toggle('active', i === idx); });
+
+          /* Barra de progreso */
+          if (fill) fill.style.height = (p * 100) + '%';
+
+          /* Hint desaparece tras 8% scroll */
+          if (hint) hint.style.opacity = p > 0.08 ? '0' : '1';
+        }
+      });
+    })();
+
+    /* ── ESCENA 3D — Infusomat compact plus ── */
     buildScene('canvas-compact', 'pump-compact', buildCompact, 4, -0.2);
   };
 
