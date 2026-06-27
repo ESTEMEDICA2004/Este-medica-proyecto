@@ -177,21 +177,53 @@
     });
   }
 
-  /* ---- PUMP 3D PROGRESS BAR ---- */
+  /* ---- PUMP IMAGE SCROLL EFFECTS ---- */
   function initPumpProgress() {
+    if (!window.gsap || !window.ScrollTrigger) return;
+
     var fill = document.getElementById("pump-progress-fill");
     var hint = document.querySelector(".pump-hint");
-    if (!fill) return;
+    var img  = document.getElementById("pump-img");
+    var panels = document.querySelectorAll(".pump-panel");
+    var panelCount = panels.length;
 
-    ScrollTrigger && ScrollTrigger.create({
+    ScrollTrigger.create({
       trigger: "#pump-section",
       start: "top top",
       end: "bottom bottom",
       onUpdate: function (self) {
-        fill.style.height = (self.progress * 100) + "%";
-        if (hint) hint.style.opacity = self.progress > 0.05 ? "0" : "";
+        /* progress bar */
+        if (fill) fill.style.height = (self.progress * 100) + "%";
+        /* hide hint once scrolled */
+        if (hint) hint.style.opacity = self.progress > 0.04 ? "0" : "";
+
+        /* switch text panels */
+        var idx = Math.min(
+          Math.floor(self.progress * panelCount),
+          panelCount - 1
+        );
+        panels.forEach(function (p, i) {
+          var active = i === idx;
+          p.style.opacity = active ? "1" : "0";
+          p.style.pointerEvents = active ? "auto" : "none";
+          p.style.transform = active ? "translateY(0)" : (i < idx ? "translateY(-24px)" : "translateY(24px)");
+        });
       },
     });
+
+    /* Subtle image drift on scroll */
+    if (img) {
+      gsap.to(img, {
+        y: -28,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#pump-section",
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 2,
+        },
+      });
+    }
   }
 
   /* ---- BOOT ---- */
@@ -206,7 +238,6 @@
     safe(initForm, "initForm");
     safe(initGSAP, "initGSAP");
     if (window.gsap) gsap.registerPlugin(ScrollTrigger);
-    if (window.initPump3D) safe(initPump3D, "initPump3D");
     safe(initPumpProgress, "initPumpProgress");
   }
 

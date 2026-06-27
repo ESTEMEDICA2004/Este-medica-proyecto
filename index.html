@@ -86,40 +86,60 @@
     </div>
   </section>
 
-  <!-- PUMP 3D SECTION -->
+  <!-- PUMP SHOWCASE SECTION -->
   <section class="section-pump" id="pump-section">
     <div class="pump-sticky">
-      <canvas id="pump-canvas"></canvas>
+
+      <!-- Ambient background -->
+      <div class="pump-bg-glow" aria-hidden="true"></div>
+
+      <!-- Product image -->
+      <div class="pump-image-wrap" aria-hidden="true">
+        <img
+          src="assets/img/infusomat-space.png"
+          alt="Bomba de infusión Infusomat Space B.Braun"
+          class="pump-img"
+          id="pump-img"
+        />
+        <div class="pump-img-shadow"></div>
+      </div>
+
+      <!-- Text panels -->
       <div class="pump-overlay">
         <div class="pump-panel" data-panel="0">
           <p class="pump-eyebrow">Infusomat<sup>®</sup> Space</p>
           <h2 class="pump-title">Precisión<br><em>alemana.</em></h2>
-          <p class="pump-desc">El estándar mundial en bombas volumétricas. Tecnología B.Braun que confían los mejores hospitales del mundo.</p>
+          <p class="pump-desc">El estándar mundial en bombas volumétricas. Tecnología B.Braun en la que confían los mejores hospitales del mundo.</p>
         </div>
         <div class="pump-panel" data-panel="1">
-          <p class="pump-eyebrow">Vista lateral</p>
-          <h2 class="pump-title">Mecanismo<br><em>anti-free-flow.</em></h2>
-          <p class="pump-desc">Sistema de seguridad que previene la administración accidental de fluidos. Certificado para UCI y quirófano.</p>
+          <p class="pump-eyebrow">Panel de control</p>
+          <h2 class="pump-title">Interfaz<br><em>intuitiva.</em></h2>
+          <p class="pump-desc">Pantalla de alta resolución con navegación por teclas físicas. Operación segura incluso con guantes quirúrgicos.</p>
         </div>
         <div class="pump-panel" data-panel="2">
-          <p class="pump-eyebrow">Vista posterior</p>
-          <h2 class="pump-title">Riel DIN<br><em>universal.</em></h2>
-          <p class="pump-desc">Compatible con cualquier soporte hospitalario estándar. Montaje en segundos, sin herramientas.</p>
+          <p class="pump-eyebrow">Seguridad clínica</p>
+          <h2 class="pump-title">Anti<br><em>free-flow.</em></h2>
+          <p class="pump-desc">Sistema que previene la administración accidental de fluidos. Certificado para uso en UCI, quirófano y neonatología.</p>
         </div>
         <div class="pump-panel" data-panel="3">
-          <p class="pump-eyebrow">360° completo</p>
+          <p class="pump-eyebrow">Sistema Space</p>
           <h2 class="pump-title">Diseñado para<br><em>salvar vidas.</em></h2>
-          <p class="pump-desc">Cada ángulo pensado para el entorno clínico. Compacto, seguro y conectado al sistema Space.</p>
+          <p class="pump-desc">Compatible con Space Station y módulo SpaceCom. Conectividad total para terapias complejas de infusión.</p>
           <a href="#contacto" class="btn btn-primary pump-cta">Cotizar este equipo →</a>
         </div>
       </div>
+
+      <!-- Scroll progress indicator -->
       <div class="pump-progress">
         <div class="pump-progress-fill" id="pump-progress-fill"></div>
       </div>
+
+      <!-- Scroll hint -->
       <div class="pump-hint" aria-hidden="true">
-        <span>Desliza para girar</span>
+        <span>Desliza para ver más</span>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 9l-7 7-7-7"/></svg>
       </div>
+
     </div>
     <div class="pump-spacer"></div>
   </section>
@@ -325,10 +345,8 @@
     </div>
   </footer>
 
-  <script defer src="lib/three.min.js"></script>
   <script defer src="lib/gsap.min.js"></script>
   <script defer src="lib/ScrollTrigger.min.js"></script>
-  <script defer src="pump3d.js?v=20260626"></script>
-  <script defer src="main.js?v=20260626"></script>
+  <script defer src="main.js?v=20260627"></script>
 </body>
 </html>
