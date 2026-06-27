@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bombas de Infusión B.Braun — Este Médica</title>
+  <meta name="description" content="Distribuidor autorizado de bombas de infusión B.Braun en México. Infusomat Space, Perfusor Space y más. Envío inmediato." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20260626" />
+</head>
+<body>
+
+  <!-- SPLASH -->
+  <div class="splash" data-splash aria-hidden="true">
+    <div class="splash-inner">
+      <div class="splash-logo">
+        <span class="splash-brand">Este Médica</span>
+        <span class="splash-sep">×</span>
+        <span class="splash-bbraun">B.Braun</span>
+      </div>
+      <div class="splash-bar"><div class="splash-bar-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="nav-logo-este">Este Médica</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#modelos">Modelos</a></li>
+        <li><a href="#caracteristicas">Características</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <a href="#contacto" class="btn btn-nav">Cotizar ahora</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg">
+      <img src="assets/img/hospital.jpg" alt="" class="hero-img" aria-hidden="true" />
+      <div class="hero-tint"></div>
+    </div>
+    <div class="hero-mesh"></div>
+    <div class="hero-grain"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal" data-split="false">Distribución autorizada · México</p>
+      <h1 class="hero-title">
+        <span class="reveal-line">Precisión que</span>
+        <span class="reveal-line accent-green"><em>salva vidas.</em></span>
+      </h1>
+      <p class="hero-sub reveal">Bombas de infusión B.Braun — tecnología alemana de vanguardia para hospitales y clínicas en todo México.</p>
+      <div class="hero-actions reveal">
+        <a href="#modelos" class="btn btn-primary">Ver modelos</a>
+        <a href="#contacto" class="btn btn-ghost">Cotizar por WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num" data-count-to="15">0</span><span class="stat-unit">+</span>
+        <span class="stat-label">años distribuyendo</span>
+      </div>
+      <div class="stat-sep" aria-hidden="true"></div>
+      <div class="stat">
+        <span class="stat-num" data-count-to="500">0</span><span class="stat-unit">+</span>
+        <span class="stat-label">hospitales atendidos</span>
+      </div>
+      <div class="stat-sep" aria-hidden="true"></div>
+      <div class="stat">
+        <span class="stat-num" data-count-to="24">0</span><span class="stat-unit">h</span>
+        <span class="stat-label">envío a todo México</span>
+      </div>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </section>
+
+  <!-- PUMP 3D SECTION -->
+  <section class="section-pump" id="pump-section">
+    <div class="pump-sticky">
+      <canvas id="pump-canvas"></canvas>
+      <div class="pump-overlay">
+        <div class="pump-panel" data-panel="0">
+          <p class="pump-eyebrow">Infusomat<sup>®</sup> Space</p>
+          <h2 class="pump-title">Precisión<br><em>alemana.</em></h2>
+          <p class="pump-desc">El estándar mundial en bombas volumétricas. Tecnología B.Braun que confían los mejores hospitales del mundo.</p>
+        </div>
+        <div class="pump-panel" data-panel="1">
+          <p class="pump-eyebrow">Vista lateral</p>
+          <h2 class="pump-title">Mecanismo<br><em>anti-free-flow.</em></h2>
+          <p class="pump-desc">Sistema de seguridad que previene la administración accidental de fluidos. Certificado para UCI y quirófano.</p>
+        </div>
+        <div class="pump-panel" data-panel="2">
+          <p class="pump-eyebrow">Vista posterior</p>
+          <h2 class="pump-title">Riel DIN<br><em>universal.</em></h2>
+          <p class="pump-desc">Compatible con cualquier soporte hospitalario estándar. Montaje en segundos, sin herramientas.</p>
+        </div>
+        <div class="pump-panel" data-panel="3">
+          <p class="pump-eyebrow">360° completo</p>
+          <h2 class="pump-title">Diseñado para<br><em>salvar vidas.</em></h2>
+          <p class="pump-desc">Cada ángulo pensado para el entorno clínico. Compacto, seguro y conectado al sistema Space.</p>
+          <a href="#contacto" class="btn btn-primary pump-cta">Cotizar este equipo →</a>
+        </div>
+      </div>
+      <div class="pump-progress">
+        <div class="pump-progress-fill" id="pump-progress-fill"></div>
+      </div>
+      <div class="pump-hint" aria-hidden="true">
+        <span>Desliza para girar</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 9l-7 7-7-7"/></svg>
+      </div>
+    </div>
+    <div class="pump-spacer"></div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Infusomat Space</span><span class="dot">·</span>
+      <span>Perfusor Space</span><span class="dot">·</span>
+      <span>Space Station</span><span class="dot">·</span>
+      <span>Outlook Safety</span><span class="dot">·</span>
+      <span>Infusomat Space Plus</span><span class="dot">·</span>
+      <span>B.Braun Medical</span><span class="dot">·</span>
+      <span>Infusomat Space</span><span class="dot">·</span>
+      <span>Perfusor Space</span><span class="dot">·</span>
+      <span>Space Station</span><span class="dot">·</span>
+      <span>Outlook Safety</span><span class="dot">·</span>
+      <span>Infusomat Space Plus</span><span class="dot">·</span>
+      <span>B.Braun Medical</span><span class="dot">·</span>
+    </div>
+  </div>
+
+  <!-- MODELOS -->
+  <section class="section-models" id="modelos">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow reveal">Línea de productos</p>
+        <h2 class="section-title reveal">Los mejores equipos<br><em>del mundo médico.</em></h2>
+      </div>
+
+      <div class="models-grid">
+
+        <article class="model-card reveal" data-model="infusomat">
+          <div class="model-img-wrap">
+            <img src="assets/img/pump.jpg" alt="Infusomat Space B.Braun" class="model-img" />
+            <div class="model-badge">Más vendido</div>
+          </div>
+          <div class="model-info">
+            <p class="model-type">Bomba volumétrica</p>
+            <h3 class="model-name">Infusomat<sup>®</sup> Space</h3>
+            <p class="model-desc">La bomba de infusión más precisa del mercado. Compatible con sistema Space para terapias complejas de UCI.</p>
+            <ul class="model-specs">
+              <li><span class="spec-icon">✓</span> Flujo: 0.1 – 999.9 mL/h</li>
+              <li><span class="spec-icon">✓</span> Alarmas inteligentes</li>
+              <li><span class="spec-icon">✓</span> VTBI programable</li>
+              <li><span class="spec-icon">✓</span> Módulo SpaceCom</li>
+            </ul>
+            <a href="#contacto" class="btn btn-card">Solicitar cotización →</a>
+          </div>
+        </article>
+
+        <article class="model-card reveal" data-model="perfusor">
+          <div class="model-img-wrap">
+            <img src="assets/img/device.jpg" alt="Perfusor Space B.Braun" class="model-img" />
+            <div class="model-badge badge-alt">UCI · Alta precisión</div>
+          </div>
+          <div class="model-info">
+            <p class="model-type">Bomba de jeringa</p>
+            <h3 class="model-name">Perfusor<sup>®</sup> Space</h3>
+            <p class="model-desc">Administración de medicamentos vasoactivos con precisión de microgramos. Ideal para pacientes críticos.</p>
+            <ul class="model-specs">
+              <li><span class="spec-icon">✓</span> Flujo: 0.1 – 999 mL/h</li>
+              <li><span class="spec-icon">✓</span> Detección automática de jeringa</li>
+              <li><span class="spec-icon">✓</span> Anti-free-flow</li>
+              <li><span class="spec-icon">✓</span> Bolus controlado</li>
+            </ul>
+            <a href="#contacto" class="btn btn-card">Solicitar cotización →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CARACTERISTICAS -->
+  <section class="section-features" id="caracteristicas">
+    <div class="features-bg">
+      <img src="assets/img/nurse.jpg" alt="" aria-hidden="true" class="features-img" />
+      <div class="features-tint"></div>
+    </div>
+    <div class="container">
+      <div class="section-header light">
+        <p class="section-eyebrow reveal">Por qué elegirnos</p>
+        <h2 class="section-title reveal">Tecnología alemana.<br><em>Servicio mexicano.</em></h2>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-item reveal">
+          <div class="feature-icon">⚡</div>
+          <h3>Envío en 24h</h3>
+          <p>Stock permanente en CDMX. Entregamos a todo México en tiempo récord para urgencias hospitalarias.</p>
+        </div>
+        <div class="feature-item reveal">
+          <div class="feature-icon">🔒</div>
+          <h3>100% originales</h3>
+          <p>Distribuidor certificado B.Braun. Todos los equipos incluyen garantía oficial de fábrica y número de serie.</p>
+        </div>
+        <div class="feature-item reveal">
+          <div class="feature-icon">🛠</div>
+          <h3>Soporte técnico</h3>
+          <p>Capacitación al personal clínico y soporte post-venta. Contamos con técnicos especializados en equipos B.Braun.</p>
+        </div>
+        <div class="feature-item reveal">
+          <div class="feature-icon">💊</div>
+          <h3>Consumibles incluidos</h3>
+          <p>Acceso a toda la línea de sets de infusión, jeringas y accesorios B.Braun compatibles con cada equipo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="section-about" id="nosotros">
+    <div class="container about-grid">
+      <div class="about-text">
+        <p class="section-eyebrow reveal">Sobre Este Médica</p>
+        <h2 class="section-title reveal">Distribuidores líderes<br><em>de insumos médicos.</em></h2>
+        <p class="about-body reveal">Somos una empresa mexicana especializada en la distribución de equipos y material médico de las mejores marcas del mundo. Con más de 15 años en el mercado, nos hemos convertido en el socio de confianza de hospitales públicos y privados en toda la república.</p>
+        <p class="about-body reveal">La línea B.Braun representa nuestra apuesta por la excelencia: equipos certificados, tecnología de punta y el respaldo de una marca líder mundial en soluciones para la salud.</p>
+        <a href="#contacto" class="btn btn-primary reveal">Hablar con un asesor</a>
+      </div>
+      <div class="about-visual reveal">
+        <img src="assets/img/hospital.jpg" alt="Hospital moderno con equipo B.Braun" />
+        <div class="about-badge">
+          <span class="badge-num" data-count-to="15">0</span><span>+</span>
+          <span class="badge-text">años de experiencia</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / CONTACTO -->
+  <section class="section-cta" id="contacto">
+    <div class="cta-mesh"></div>
+    <div class="container">
+      <div class="cta-inner">
+        <p class="section-eyebrow light reveal">Contacto directo</p>
+        <h2 class="cta-title reveal">¿Listo para cotizar<br><em>tu equipo B.Braun?</em></h2>
+        <p class="cta-sub reveal">Envíanos tu solicitud y un asesor especializado te contactará en menos de 2 horas hábiles.</p>
+
+        <form class="cta-form reveal" id="cta-form" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Dr. García López" required />
+            </div>
+            <div class="form-field">
+              <label for="institucion">Hospital / Institución</label>
+              <input type="text" id="institucion" name="institucion" placeholder="Hospital General IMSS" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="telefono">Teléfono / WhatsApp</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="+52 55 1234 5678" required />
+            </div>
+            <div class="form-field">
+              <label for="modelo">Modelo de interés</label>
+              <select id="modelo" name="modelo">
+                <option value="">Seleccionar modelo</option>
+                <option value="infusomat">Infusomat Space</option>
+                <option value="perfusor">Perfusor Space</option>
+                <option value="station">Space Station</option>
+                <option value="otro">Otro / No sé aún</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field full">
+            <label for="mensaje">Mensaje (opcional)</label>
+            <textarea id="mensaje" name="mensaje" rows="3" placeholder="Cantidad de equipos, urgencia, presupuesto aproximado..."></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-submit" id="submit-btn">
+              <span class="btn-label">Enviar solicitud</span>
+              <span class="btn-check" aria-hidden="true">✓ Enviado</span>
+            </button>
+            <a href="https://wa.me/528683009437?text=Hola,%20quisiera%20información%20sobre%20bombas%20B.Braun" target="_blank" rel="noopener" class="btn btn-whatsapp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp directo
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">Este Médica</span>
+        <p>Distribuidora líder de insumos médicos y equipo quirúrgico en México.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://estemedicacom.com" target="_blank" rel="noopener">Tienda en línea</a>
+        <a href="#modelos">Modelos B.Braun</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div class="footer-legal">
+        <p>© 2026 Este Médica. Distribuidor no oficial de B.Braun.</p>
+        <p class="credits-note">Imágenes: <a href="assets/credits.json" target="_blank">ver atribuciones</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="lib/three.min.js"></script>
+  <script defer src="lib/gsap.min.js"></script>
+  <script defer src="lib/ScrollTrigger.min.js"></script>
+  <script defer src="pump3d.js?v=20260626"></script>
+  <script defer src="main.js?v=20260626"></script>
+</body>
+</html>
